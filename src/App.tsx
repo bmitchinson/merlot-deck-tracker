@@ -1,8 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Plugins } from "@capacitor/core";
+
+const { Device, Modals } = Plugins;
 
 function App() {
+  const showDeviceInfo = async (): Promise<void> => {
+    let info = await Device.getInfo();
+    await Modals.alert({
+      title: "Info",
+      message: `UUID: ${info.uuid};
+        Model: ${info.model}`,
+    });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +30,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={showDeviceInfo}> Show Device Info</button>
       </header>
     </div>
   );

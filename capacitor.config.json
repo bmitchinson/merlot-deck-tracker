@@ -1,0 +1,13 @@
+{
+  "appId": "com.example.merlotDeckTracker",
+  "appName": "react-capactor-example",
+  "bundledWebRuntime": false,
+  "webDir": "build",
+  "npmClient": "yarn",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
