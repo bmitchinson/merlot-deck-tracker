@@ -28,12 +28,12 @@ export const Counter = () => {
 
   return (
     <SimpleGrid>
-      <Box bg="#b3faff" fontSize={"40vw"}>
+      <Box bg="#b3faff" fontSize={"30vh"}>
         {invisButton(() => setTop(top + 1))}
         {invisButton(() => setTop(top - 1), true)}
         <Center height="50vh">{top}</Center>
       </Box>
-      <Box bg="#ccff99" fontSize={"40vw"}>
+      <Box bg="#ccff99" fontSize={"30vh"}>
         {invisButton(() => setBottom(bottom + 1))}
         {invisButton(() => setBottom(bottom - 1), true)}
         <Center height={"50vh"}>{bottom}</Center>
